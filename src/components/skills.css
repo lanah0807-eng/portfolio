@@ -1,0 +1,116 @@
+.skills-section {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+}
+
+.skills-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.skills-text .section-label {
+  margin: 0 0 14px;
+  color: rgba(229, 244, 255, 0.8);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-text h2 {
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(54px, 6vw, 92px);
+  line-height: 0.95;
+  font-weight: 500;
+  color: #f3faff;
+}
+
+.skills-text p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.7;
+  color: rgba(236, 246, 255, 0.84);
+  max-width: 440px;
+}
+
+.skills-bubbles {
+  position: relative;
+  min-height: 520px;
+}
+
+.skill-bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  color: #eef8ff;
+  font-weight: 600;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.skill-bubble.big {
+  width: 180px;
+  height: 180px;
+  font-size: 22px;
+}
+
+.skill-bubble.mid {
+  width: 140px;
+  height: 140px;
+  font-size: 18px;
+}
+
+.skill-bubble.small {
+  width: 110px;
+  height: 110px;
+  font-size: 15px;
+}
+
+.skill-bubble:nth-child(1) {
+  top: 20px;
+  left: 40px;
+}
+.skill-bubble:nth-child(2) {
+  top: 160px;
+  left: 200px;
+}
+.skill-bubble:nth-child(3) {
+  top: 70px;
+  right: 70px;
+}
+.skill-bubble:nth-child(4) {
+  top: 320px;
+  left: 70px;
+}
+.skill-bubble:nth-child(5) {
+  top: 360px;
+  right: 120px;
+}
+.skill-bubble:nth-child(6) {
+  top: 210px;
+  right: 10px;
+}
+
+@media (max-width: 900px) {
+  .skills-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-bubbles {
+    min-height: 620px;
+  }
+}
+

@@ -1,0 +1,151 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.15s linear;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.ocean-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.blur-1 {
+  width: 320px;
+  height: 320px;
+  top: 35vh;
+  left: -100px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.blur-2 {
+  width: 420px;
+  height: 420px;
+  top: 150vh;
+  right: -120px;
+  background: rgba(87, 179, 255, 0.35);
+}
+
+.blur-3 {
+  width: 300px;
+  height: 300px;
+  top: 260vh;
+  left: 35%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bubble {
+  position: fixed;
+  bottom: -60px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.72),
+    rgba(255, 255, 255, 0.12)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+  animation-name: riseBubble;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.bubble-1 {
+  width: 16px;
+  height: 16px;
+  left: 8%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.bubble-2 {
+  width: 26px;
+  height: 26px;
+  left: 16%;
+  animation-duration: 18s;
+  animation-delay: 4s;
+}
+
+.bubble-3 {
+  width: 10px;
+  height: 10px;
+  left: 38%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.bubble-4 {
+  width: 18px;
+  height: 18px;
+  left: 58%;
+  animation-duration: 15s;
+  animation-delay: 5s;
+}
+
+.bubble-5 {
+  width: 12px;
+  height: 12px;
+  left: 72%;
+  animation-duration: 11s;
+  animation-delay: 1s;
+}
+
+.bubble-6 {
+  width: 22px;
+  height: 22px;
+  left: 84%;
+  animation-duration: 17s;
+  animation-delay: 7s;
+}
+
+.bubble-7 {
+  width: 8px;
+  height: 8px;
+  left: 92%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+@keyframes riseBubble {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateY(-50vh) translateX(8px);
+  }
+
+  100% {
+    transform: translateY(-115vh) translateX(-12px);
+    opacity: 0;
+  }
+}

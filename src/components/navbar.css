@@ -1,0 +1,46 @@
+.site-navbar {
+  position: fixed;
+  top: 22px;
+  right: 28px;
+  z-index: 20;
+
+  display: flex;
+  gap: 14px;
+  padding: 10px 14px;
+
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.site-navbar a {
+  color: #eef8ff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.site-navbar a:hover {
+  opacity: 0.72;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .site-navbar {
+    top: auto;
+    bottom: 16px;
+    right: 50%;
+    transform: translateX(50%);
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: calc(100vw - 24px);
+  }
+
+  .site-navbar a {
+    font-size: 14px;
+  }
+}
